@@ -10,8 +10,17 @@ class AppImages {
   static const String blicq = 'assets/images/blicq.png';
   static const String piecee = 'assets/images/piecee.png';
   static const String gift = 'assets/images/gift.png';
+  static const String gift2 = 'assets/images/gift2.png';
   static const String image = 'assets/images/image.png';
+  static const String leaf = 'assets/images/leaf.png';
+  static const String convert = 'assets/images/convert.png';
+  static const String car = 'assets/images/car.png';
+  static const String bigCar = 'assets/images/bigCar.png';
+  static const String setting = 'assets/images/setting.png';
 
   // svgs
   static const String notification = 'assets/svgs/notification.svg';
+  static const String card = 'assets/svgs/card.svg';
+  static const String edit = 'assets/svgs/edit.svg';
+  static const String recent = 'assets/svgs/recent.svg';
 }

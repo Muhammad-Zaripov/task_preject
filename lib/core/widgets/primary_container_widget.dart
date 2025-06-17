@@ -1,10 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:task_preject/core/extensions/ontext_extensions.dart';
 
-import '../utils/app_images.dart';
-
 class PrimaryContainerWidget extends StatelessWidget {
-  const PrimaryContainerWidget({super.key});
+  final bool isProfile;
+  final String title;
+  final String subtitle;
+  final String contTitle;
+  final String image;
+  const PrimaryContainerWidget({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    required this.contTitle,
+    required this.image,
+    this.isProfile = false,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -41,16 +51,22 @@ class PrimaryContainerWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Get up to 200 L in gift',
+                title,
                 style: TextStyle(
                   fontSize: context.s(18),
                   fontWeight: FontWeight.w600,
                 ),
               ),
               SizedBox(height: context.h(8)),
-              Text(
-                'Invite friends to FuelBack',
-                style: TextStyle(fontSize: context.s(14)),
+              SizedBox(
+                width: 255,
+                child: Text(
+                  subtitle,
+                  style: TextStyle(
+                    fontSize: context.s(14),
+                    color: Color(0xff979797),
+                  ),
+                ),
               ),
               SizedBox(height: context.h(16)),
               Container(
@@ -60,7 +76,7 @@ class PrimaryContainerWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(context.r(32)),
                 ),
                 child: Text(
-                  'Share invite',
+                  contTitle,
                   style: TextStyle(
                     fontSize: context.s(16),
                     fontWeight: FontWeight.w500,
@@ -72,8 +88,8 @@ class PrimaryContainerWidget extends StatelessWidget {
         ),
         Positioned(
           right: context.w(-10),
-          top: context.h(19),
-          child: Image.asset(AppImages.gift, width: context.w(163)),
+          top: isProfile ? context.h(60) : context.h(20),
+          child: Image.asset(image, width: context.w(163)),
         ),
         Positioned(
           top: 12,

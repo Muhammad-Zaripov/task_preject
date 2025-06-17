@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:task_preject/feature/home/widgets/fule_widget.dart';
+import 'package:task_preject/feature/profile/screens/profile_screen.dart';
 import '../../../core/utils/app_images.dart';
 import '../../../core/widgets/primary_container_widget.dart';
+import '../widgets/balance_widget.dart';
+import '../widgets/car_wash_widget.dart';
 import '../widgets/container_widget.dart';
+import '../widgets/items_widget.dart';
+import '../widgets/piurchase_history_widget.dart';
+import '../widgets/price_tracking_widget.dart';
 import '../widgets/primary_button_widget.dart';
 import '../../../core/extensions/ontext_extensions.dart';
 import '../widgets/recommended_container_widget.dart';
@@ -54,14 +61,24 @@ class HomeScreen extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              CircleAvatar(
-                                radius: 22,
-                                child: ClipOval(
-                                  child: Image.asset(
-                                    AppImages.person,
-                                    width: 44,
-                                    height: 44,
-                                    fit: BoxFit.cover,
+                              InkWell(
+                                onTap: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (cxt) => ProfileScreen(),
+                                    ),
+                                  );
+                                },
+                                child: CircleAvatar(
+                                  radius: 22,
+                                  child: ClipOval(
+                                    child: Image.asset(
+                                      AppImages.person,
+                                      width: 44,
+                                      height: 44,
+                                      fit: BoxFit.cover,
+                                    ),
                                   ),
                                 ),
                               ),
@@ -147,56 +164,30 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 16, right: 16),
+              padding: const EdgeInsets.only(left: 16, right: 16, bottom: 74),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  PrimaryContainerWidget(),
+                  PrimaryContainerWidget(
+                    title: 'Get up to 200 L in gift',
+                    subtitle: 'Invite friends to FuelBack',
+                    contTitle: 'Share invite',
+                    image: AppImages.gift,
+                  ),
                   SizedBox(height: context.h(16)),
                   RecommendedContainerWidget(),
+                  SizedBox(height: context.h(16)),
+                  ItemsWidget(),
+                  SizedBox(height: context.h(16)),
+                  BalanceWidget(),
+                  SizedBox(height: context.h(16)),
+                  PiurchaseHistoryWidget(),
+                  SizedBox(height: context.h(16)),
+                  CarWashWidget(),
+                  SizedBox(height: context.h(16)),
                   Row(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.only(
-                          left: context.w(12),
-                          right: context.w(12),
-                          top: context.h(12),
-                          bottom: context.h(8),
-                        ),
-                        decoration: BoxDecoration(
-                          color: Color(0xff25A9FE),
-                          borderRadius: BorderRadius.circular(context.r(16)),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Send Fuelz',
-                                  style: TextStyle(
-                                    fontSize: context.s(18),
-                                    fontWeight: FontWeight.w600,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                Image.asset(
-                                  AppImages.transfer,
-                                  width: context.w(24),
-                                ),
-                              ],
-                            ),
-                            Text(
-                              'LKR 287.00 to share',
-                              style: TextStyle(
-                                fontSize: context.s(16),
-                                color: Colors.white,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [FuleWidget(), PriceTrackingWidget()],
                   ),
                 ],
               ),
