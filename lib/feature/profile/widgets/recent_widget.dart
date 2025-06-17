@@ -8,7 +8,6 @@ class RecentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RounderWidget(
-      // width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

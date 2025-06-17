@@ -1,6 +1,4 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_preject/core/extensions/ontext_extensions.dart';
 import 'package:task_preject/core/widgets/rounder_widget.dart';
 import 'package:task_preject/feature/profile/widgets/badges_widget.dart';

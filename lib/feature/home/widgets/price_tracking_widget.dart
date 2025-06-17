@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:task_preject/core/extensions/ontext_extensions.dart';
 import 'package:task_preject/core/widgets/rounder_widget.dart';
 
-import '../../../core/utils/app_images.dart';
-
 class PriceTrackingWidget extends StatelessWidget {
   const PriceTrackingWidget({super.key});
 
