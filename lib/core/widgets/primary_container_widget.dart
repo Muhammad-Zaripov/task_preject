@@ -9,9 +9,9 @@ class PrimaryContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      clipBehavior: Clip.hardEdge,
       children: [
         Container(
+          clipBehavior: Clip.hardEdge,
           padding: EdgeInsets.all(12),
           width: double.infinity,
           decoration: BoxDecoration(
@@ -71,9 +71,14 @@ class PrimaryContainerWidget extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: -10,
-          top: 10,
+          right: context.w(-10),
+          top: context.h(19),
           child: Image.asset(AppImages.gift, width: context.w(163)),
+        ),
+        Positioned(
+          top: 12,
+          right: 12,
+          child: Icon(Icons.cancel_presentation_outlined),
         ),
       ],
     );

@@ -10,6 +10,7 @@ class AppImages {
   static const String blicq = 'assets/images/blicq.png';
   static const String piecee = 'assets/images/piecee.png';
   static const String gift = 'assets/images/gift.png';
+  static const String image = 'assets/images/image.png';
 
   // svgs
   static const String notification = 'assets/svgs/notification.svg';
