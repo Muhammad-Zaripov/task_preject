@@ -3,6 +3,7 @@ import 'package:task_preject/feature/home/widgets/fule_widget.dart';
 import 'package:task_preject/feature/profile/screens/profile_screen.dart';
 import '../../../core/utils/app_images.dart';
 import '../../../core/widgets/primary_container_widget.dart';
+import '../../../core/widgets/rounder_widget.dart';
 import '../widgets/balance_widget.dart';
 import '../widgets/car_wash_widget.dart';
 import '../widgets/container_widget.dart';
@@ -163,34 +164,63 @@ class HomeScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16, right: 16, bottom: 74),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  PrimaryContainerWidget(
-                    title: 'Get up to 200 L in gift',
-                    subtitle: 'Invite friends to FuelBack',
-                    contTitle: 'Share invite',
-                    image: AppImages.gift,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16),
+                  child: RounderWidget(
+                    padding: EdgeInsets.zero,
+                    child: PrimaryContainerWidget(
+                      title: 'Get up to 200 L in gift',
+                      subtitle: 'Invite friends to FuelBack',
+                      contTitle: 'Share invite',
+                      image: AppImages.gift,
+                    ),
                   ),
-                  SizedBox(height: context.h(16)),
-                  RecommendedContainerWidget(),
-                  SizedBox(height: context.h(16)),
-                  ItemsWidget(),
-                  SizedBox(height: context.h(16)),
-                  BalanceWidget(),
-                  SizedBox(height: context.h(16)),
-                  PiurchaseHistoryWidget(),
-                  SizedBox(height: context.h(16)),
-                  CarWashWidget(),
-                  SizedBox(height: context.h(16)),
-                  Row(
+                ),
+                SizedBox(height: context.h(16)),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16),
+                  child: RecommendedContainerWidget(),
+                ),
+                SizedBox(height: context.h(16)),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16),
+                  child: ItemsWidget(),
+                ),
+                SizedBox(height: context.h(16)),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16),
+                  child: BalanceWidget(),
+                ),
+                SizedBox(height: context.h(16)),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16),
+                  child: PiurchaseHistoryWidget(),
+                ),
+                SizedBox(height: context.h(16)),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16),
+                  child: RounderWidget(child: CarWashWidget()),
+                ),
+                SizedBox(height: context.h(16)),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                    bottom: 74,
+                  ),
+                  child: Row(
+                    spacing: 12,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [FuleWidget(), PriceTrackingWidget()],
+                    children: [
+                      Expanded(child: FuleWidget()),
+                      Expanded(child: PriceTrackingWidget()),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),

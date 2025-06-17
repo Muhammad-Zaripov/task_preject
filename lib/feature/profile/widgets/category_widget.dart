@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:task_preject/core/widgets/rounder_widget.dart';
 import '../../../core/utils/app_images.dart';
 
 class CategoryWidget extends StatelessWidget {
@@ -15,13 +16,10 @@ class CategoryWidget extends StatelessWidget {
 
     return Column(
       children: items.map((item) {
-        return Container(
+        return RounderWidget(
           margin: const EdgeInsets.only(bottom: 12),
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(16),
-          ),
+
           child: Row(
             children: [
               SvgPicture.asset(item['icon']!, width: 32, height: 32),

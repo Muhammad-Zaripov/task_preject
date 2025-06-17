@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:task_preject/core/widgets/rounder_widget.dart';
 
 import '../../../core/utils/app_images.dart';
 
@@ -8,13 +9,7 @@ class PersonInformationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(12),
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-      ),
+    return RounderWidget(
       child: Column(
         children: [
           Row(
@@ -57,6 +52,7 @@ class PersonInformationWidget extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(height: 16),
           Row(
             spacing: 8,
             children: [

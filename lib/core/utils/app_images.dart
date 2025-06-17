@@ -27,4 +27,5 @@ class AppImages {
   static const String recent = 'assets/svgs/recent.svg';
   static const String set = 'assets/svgs/set.svg';
   static const String promo = 'assets/svgs/promo.svg';
+  static const String close = 'assets/svgs/close.svg';
 }

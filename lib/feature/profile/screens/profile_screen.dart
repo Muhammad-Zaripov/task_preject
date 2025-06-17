@@ -2,6 +2,7 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_preject/core/extensions/ontext_extensions.dart';
+import 'package:task_preject/core/widgets/rounder_widget.dart';
 import 'package:task_preject/feature/profile/widgets/badges_widget.dart';
 import '../../../core/utils/app_images.dart';
 import '../../../core/widgets/primary_container_widget.dart';
@@ -66,15 +67,19 @@ class ProfileScreen extends StatelessWidget {
               const PersonInformationWidget(),
               SizedBox(height: context.h(16)),
               RecentWidget(),
-              PrimaryContainerWidget(
-                isProfile: true,
-                title: 'Invite friends to FuelBack',
-                subtitle:
-                    'You get 50 Fuelz when your friends makes their first purchase.',
-                contTitle: 'Find out more',
-                image: AppImages.gift2,
-              ),
               SizedBox(height: context.h(16)),
+              RounderWidget(
+                padding: EdgeInsets.zero,
+                child: PrimaryContainerWidget(
+                  isProfile: true,
+                  title: 'Invite friends to FuelBack',
+                  subtitle:
+                      'You get 50 Fuelz when your friends makes their first purchase.',
+                  contTitle: 'Find out more',
+                  image: AppImages.gift2,
+                ),
+              ),
+              SizedBox(height: context.h(20)),
               CategoryWidget(),
               SizedBox(height: context.h(28)),
               Text(
@@ -93,8 +98,8 @@ class ProfileScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: context.h(16)),
-              BadgesWidget(count: 6),
+              SizedBox(height: context.h(20)),
+              RounderWidget(child: BadgesWidget(count: 6)),
             ],
           ),
         ),

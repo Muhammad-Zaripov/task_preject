@@ -45,7 +45,6 @@ class PrimaryContainerWidget extends StatelessWidget {
               ],
             ),
             borderRadius: BorderRadius.circular(context.r(16)),
-            
           ),
 
           child: Column(
@@ -92,11 +91,7 @@ class PrimaryContainerWidget extends StatelessWidget {
           top: isProfile ? context.h(60) : context.h(20),
           child: Image.asset(image, width: context.w(163)),
         ),
-        Positioned(
-          top: 12,
-          right: 12,
-          child: Icon(Icons.cancel_presentation_outlined),
-        ),
+        Positioned(top: 12, right: 12, child: Icon(Icons.close)),
       ],
     );
   }

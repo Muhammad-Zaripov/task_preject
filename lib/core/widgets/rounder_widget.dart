@@ -3,11 +3,18 @@ import 'package:flutter/material.dart';
 class RounderWidget extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry? padding;
-  const RounderWidget({super.key, required this.child, this.padding});
+  final EdgeInsetsGeometry? margin;
+  const RounderWidget({
+    super.key,
+    required this.child,
+    this.padding,
+    this.margin,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: margin ,
       padding: padding ?? EdgeInsets.all(12),
       decoration: BoxDecoration(
         boxShadow: [
