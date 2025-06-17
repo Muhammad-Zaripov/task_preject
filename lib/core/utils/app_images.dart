@@ -17,10 +17,14 @@ class AppImages {
   static const String car = 'assets/images/car.png';
   static const String bigCar = 'assets/images/bigCar.png';
   static const String setting = 'assets/images/setting.png';
+  static const String projectImage = 'assets/images/projectImage.png';
+  static const String badge = 'assets/images/badge.png';
 
   // svgs
   static const String notification = 'assets/svgs/notification.svg';
   static const String card = 'assets/svgs/card.svg';
   static const String edit = 'assets/svgs/edit.svg';
   static const String recent = 'assets/svgs/recent.svg';
+  static const String set = 'assets/svgs/set.svg';
+  static const String promo = 'assets/svgs/promo.svg';
 }

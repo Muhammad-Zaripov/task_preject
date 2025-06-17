@@ -13,12 +13,7 @@ class RecommendedDetails extends StatelessWidget {
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(16),
-          child: Image.asset(
-            image,
-            width: 245,
-            height: 215,
-            fit: BoxFit.cover,
-          ),
+          child: Image.asset(image, width: 245, height: 215, fit: BoxFit.cover),
         ),
         Positioned(
           top: 12,
@@ -31,10 +26,7 @@ class RecommendedDetails extends StatelessWidget {
             ),
             child: Text(
               'Open',
-              style: TextStyle(
-                fontSize: context.s(12),
-                color: Colors.white,
-              ),
+              style: TextStyle(fontSize: context.s(12), color: Colors.white),
             ),
           ),
         ),
@@ -57,20 +49,16 @@ class RecommendedDetails extends StatelessWidget {
                   children: [
                     Text(
                       'Ultimate IOC',
+                      maxLines: 1,
                       style: TextStyle(
                         fontSize: context.s(16),
                         color: Colors.white,
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.symmetric(
-                        horizontal: 8,
-                        vertical: 4,
-                      ),
+                      padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          context.r(16),
-                        ),
+                        borderRadius: BorderRadius.circular(context.r(16)),
                         color: Colors.black,
                       ),
                       child: Row(
@@ -93,6 +81,7 @@ class RecommendedDetails extends StatelessWidget {
                     Image.asset(AppImages.location),
                     Text(
                       '172 Wandurmmulla',
+                      maxLines: 1,
                       style: TextStyle(
                         fontSize: context.s(14),
                         color: Colors.white,

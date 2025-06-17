@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_preject/core/extensions/ontext_extensions.dart';
+import 'package:task_preject/core/widgets/rounder_widget.dart';
 
 import '../../../core/utils/app_images.dart';
 import 'recommended_details.dart';
@@ -9,12 +10,7 @@ class RecommendedContainerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(context.r(12)),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-      ),
+    return RounderWidget(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

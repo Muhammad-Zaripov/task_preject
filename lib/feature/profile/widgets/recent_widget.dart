@@ -44,11 +44,16 @@ class RecentWidget extends StatelessWidget {
                 lineBarsData: [
                   LineChartBarData(
                     spots: const [
-                      FlSpot(0, 5),
+                      // FlSpot(0, 4),
+                      // FlSpot(1, 4.3),
+                      // FlSpot(2, 3.8),
+                      // FlSpot(3, 4.5),
+                      // FlSpot(4, 3.7),
+                      FlSpot(0, 3.7),
                       FlSpot(1, 4),
-                      FlSpot(2, 3),
-                      FlSpot(3, 6),
-                      FlSpot(4, 4),
+                      FlSpot(2, 3.4),
+                      FlSpot(3, 3.9),
+                      FlSpot(4, 3.2),
                     ],
                     isCurved: true,
                     color: Colors.black,

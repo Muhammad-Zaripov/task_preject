@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:task_preject/core/extensions/ontext_extensions.dart';
+import 'package:task_preject/core/widgets/rounder_widget.dart';
 
 import '../../../core/utils/app_images.dart';
 
@@ -8,12 +9,9 @@ class PriceTrackingWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return RounderWidget(
       padding: EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16),
-      ),
+
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

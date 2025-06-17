@@ -2,9 +2,12 @@ import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:task_preject/core/extensions/ontext_extensions.dart';
+import 'package:task_preject/feature/profile/widgets/badges_widget.dart';
 import '../../../core/utils/app_images.dart';
 import '../../../core/widgets/primary_container_widget.dart';
+import '../widgets/category_widget.dart';
 import '../widgets/person_information_widget.dart';
+import '../widgets/project_widget.dart';
 import '../widgets/recent_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -15,6 +18,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        surfaceTintColor: Colors.white,
         backgroundColor: Colors.white,
         elevation: 0,
         leading: Padding(
@@ -71,7 +75,26 @@ class ProfileScreen extends StatelessWidget {
                 image: AppImages.gift2,
               ),
               SizedBox(height: context.h(16)),
-              Container(),
+              CategoryWidget(),
+              SizedBox(height: context.h(28)),
+              Text(
+                'My projects',
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+              ),
+              SizedBox(height: context.h(12)),
+              SingleChildScrollView(
+                clipBehavior: Clip.none,
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  spacing: 8,
+                  children: [
+                    MyProjectsItem(image: AppImages.projectImage),
+                    MyProjectsItem(image: AppImages.projectImage),
+                  ],
+                ),
+              ),
+              SizedBox(height: context.h(16)),
+              BadgesWidget(count: 6),
             ],
           ),
         ),
